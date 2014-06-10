@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://ajtroxell.com/demos/simple-php-jquery-and-ajax-powered-contact-form-demo/ -->
+<html class=" js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="en" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>
+		  Simple PHP, jQuery, and AJAX Powered Contact Form Demo - AJ Troxell	</title>
+
+	<!-- CSS -->
+			<style type="text/css">
+			form {
+    margin:0
+}
+form label {
+    display: block;
+    margin-bottom:.2em;
+    font-family:"Inconsolata", sans-serif;
+    font-size:13px;
+    line-height:13px;
+    font-size:1.3rem;
+    line-height:1.3rem;
+    color:#000;
+}
+form label.error {
+    margin-top:-1em;
+    margin-bottom:1em;
+    font-size:12px;
+    line-height:12px;
+    font-size:1.2rem;
+    line-height:1.2rem;
+    color:#c0392b
+}
+form input[type="text"], form input[type="password"], form input[type="date"], form input[type="datetime"], form input[type="datetime-local"], form input[type="month"], form input[type="week"], form input[type="email"], form input[type="number"], form input[type="search"], form input[type="tel"], form input[type="time"], form input[type="url"], form textarea {
+    margin-bottom:1.25em;
+    font-family:"Inconsolata", sans-serif;
+    font-size:14px;
+    line-height:14px;
+    font-size:1.4rem;
+    line-height:1.4rem;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    background:#e6e6e6;
+    border:1px solid #191919;
+    -moz-border-radius:0.2em 0.2em 0.2em 0.2em;
+    -webkit-border-radius:0.2em 0.2em 0.2em 0.2em;
+    border-radius:0.2em 0.2em 0.2em 0.2em
+}
+form input[type="text"]:focus, form input[type="password"]:focus, form input[type="date"]:focus, form input[type="datetime"]:focus, form input[type="datetime-local"]:focus, form input[type="month"]:focus, form input[type="week"]:focus, form input[type="email"]:focus, form input[type="number"]:focus, form input[type="search"]:focus, form input[type="tel"]:focus, form input[type="time"]:focus, form input[type="url"]:focus, form textarea:focus {
+    border-color:#191919;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none
+}
+form input[type="text"][disabled], form input[type="password"][disabled], form input[type="date"][disabled], form input[type="datetime"][disabled], form input[type="datetime-local"][disabled], form input[type="month"][disabled], form input[type="week"][disabled], form input[type="email"][disabled], form input[type="number"][disabled], form input[type="search"][disabled], form input[type="tel"][disabled], form input[type="time"][disabled], form input[type="url"][disabled], form textarea[disabled] {
+    background:#fff
+}
+form input[type="text"].error, form input[type="password"].error, form input[type="date"].error, form input[type="datetime"].error, form input[type="datetime-local"].error, form input[type="month"].error, form input[type="week"].error, form input[type="email"].error, form input[type="number"].error, form input[type="search"].error, form input[type="tel"].error, form input[type="time"].error, form input[type="url"].error, form textarea.error {
+    background:#e6e6e6;
+    border-color:#c0392b
+}
+fieldset {
+    border:0px;
+    margin:0;
+    padding:0
+}
+.required {
+    color:#e9266d
+}
+#success, #error {
+    display:none
+}
+#success span, #error span {
+    display:block;
+    position:absolute;
+    top:0;
+    width:100%
+}
+#success span p, #error span p {
+    margin-top:6em
+}
+#success span p {
+    color:#9bd32d
+}
+#error span p {
+    color:#c0392b
+}		</style>
+
+</head>
+<body>
+
+			<!-- Demo -->
+										<h1>Simple PHP, jQuery, and AJAX Powered Contact Form Demo</h1>
+				<form id="contact" name="contact" method="post" novalidate="novalidate">
+    <fieldset>
+        <label for="name" id="name">Name<span class="required">*</span>
+        </label>
+        <input type="text" name="name" id="name" size="30" value="" required="">
+        <label for="email" id="email">Email<span class="required">*</span>
+        </label>
+        <input type="text" name="email" id="email" size="30" value="" required="">
+        <label for="phone" id="phone">Phone</label>
+        <input type="text" name="phone" id="phone" size="30" value="">
+        <label for="Message" id="message">Message<span class="required">*</span>
+        </label>
+        <textarea name="message" id="message" required=""></textarea>
+        <label for="Answer" id="answer">Name the small house pet that says “<i>meow</i>“<span class="required">*</span>
+        </label>
+        <input type="text" name="answer" value="" required=""></br>
+        <input id="submit" type="submit" name="submit" value="Send">
+    </fieldset>
+</form>
+
+<div id="success">
+    <span class="green textcenter">
+        <p>Your message was sent successfully! I will be in touch as soon as I can.</p>
+    </span>
+</div>
+
+<div id="error">
+    <span>
+        <p>Something went wrong, try refreshing and submitting the form again.</p>
+    </span>
+</div>
+
+				<p>Feel free to view the source code!</p>
+
+
+	<!-- Vendor JS -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+jQuery.validator.addMethod('answercheck', function (value, element) {
+        return this.optional(element) || /^\bcat\b$/.test(value);
+    }, "type the correct answer -_-");
+
+// validate contact form
+$(function() {
+    $('#contact').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                required: true
+            },
+            answer: {
+                required: true,
+                answercheck: true
+            }
+        },
+        messages: {
+            name: {
+                required: "come on, you have a name don't you?",
+                minlength: "your name must consist of at least 2 characters"
+            },
+            email: {
+                required: "no email, no message"
+            },
+            message: {
+                required: "um...yea, you have to write something to send this form.",
+                minlength: "thats all? really?"
+            },
+            answer: {
+                required: "sorry, wrong answer!"
+            }
+        },
+        submitHandler: function(form) {
+            $(form).ajaxSubmit({
+                type:"POST",
+                data: $(form).serialize(),
+                url:"process.php",
+                success: function() {
+                    $('#contact :input').attr('disabled', 'disabled');
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $(this).find(':input').attr('disabled', 'disabled');
+                        $(this).find('label').css('cursor','default');
+                        $('#success').fadeIn();
+                    });
+                },
+                error: function() {
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $('#error').fadeIn();
+                    });
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body></html>
