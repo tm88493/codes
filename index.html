@@ -11,7 +11,7 @@
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/raphael.js" type="text/javascript"></script>
   <script src="js/init.js" type="text/javascript"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
 	  <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>-->
@@ -23,10 +23,10 @@
 
   <nav id="topnav" class="clearfix">
     <ul>
-      <li><div class="imageContainer1"><a href="#pagetop" id="homenavlink"><img src="./img/life.png" alt="home"  height="50" width="50" /><img class="aboutme" src="./img/about_bubble.png" alt="about_bubble" height="35" width="70" /></a></div></li>
-      <li><div class="imageContainer2"><a href="#about" id="aboutnavlink"><img src="./img/star.png" alt="star" height="50" width="50"><img class="mywork" src="./img/work_bubble.png" alt="work_bubble" height="35" width="70" /></a></div></li>
-      <li><div class="imageContainer3"><a href="#portfolio" id="portfolionavlink"><img src="./img/future.png" alt="future" height="50" width="50"><img class="future" src="./img/future_bubble.png" alt="future_bubble" height="35" width="70" /></a></div></li>
-      <li><div class="imageContainer4"><a href="#contact" id="contactnavlink"><img src="./img/brief.png" alt="brief" height="40" width="55"><img class="contact" src="./img/contact_bubble.png" alt="contact_bubble" height="35" width="70" /></a></div></li>
+      <li><div class="imageContainer1"><a href="#pagetop" id="homenavlink"><img src="./img/life.png" alt="home"  height="50" width="50" /><img class="timeline" src="./img/background_bubble.png" alt="background_bubble" height="35" width="120" /></a></div></li>
+      <li><div class="imageContainer2"><a href="#myskills" id="skillsnavlink"><img src="./img/star.png" alt="star" height="50" width="50"><img class="myskills" src="./img/skills_bubble.png" alt="skills_bubble" height="30" width="70" /></a></div></li>
+      <li><div class="imageContainer3"><a href="#aboutme" id="aboutmenavlink"><img src="./img/future.png" alt="future" height="50" width="50"><img class="aboutme" src="./img/about_bubble.png" alt="about_bubble" height="30" width="70" /></a></div></li>
+      <li><div class="imageContainer4"><a href="#contact" id="contactnavlink"><img src="./img/brief.png" alt="brief" height="40" width="55"><img class="contact" src="./img/contact_bubble.png" alt="contact_bubble" height="30" width="80" /></a></div></li>
 	  <li>
 		<div class="imageContainer5">
 			<img class="referencespic" src="./img/references.png" alt="references" usemap="#referencesmap" height="90" width="140">
@@ -34,15 +34,13 @@
 				<area shape="rect" alt="Github" title="" coords="3,3,35,34" href="http://github.com/tm88493/codes" target="_blank" />
 				<area shape="rect" alt="Youtube" title="" coords="7,50,51,88" href="https://www.youtube.com/watch?v=bxZ-rZ1abBQ" target="_blank" />
 				<area shape="rect" alt="LinkedIn" title="" coords="97,7,137,41" href="http://fi.linkedin.com/pub/tero-strakh/5b/622/940" target="_blank" />
-				<area shape="rect" alt="Facebook" title="" coords="85,46,125,79" href="http://www.facebook.com" target="_blank" />
+				<area shape="rect" alt="Facebook" title="" coords="85,46,125,79" href="http://www.facebook.com/tero.strakh" target="_blank" />
 			</map>
 		</div>
 	  </li>
     </ul>
   </nav><!-- @end #topnav -->
   
-  
-  <!-- BG http://architecture.desktopnexus.com/wallpaper/1581572/ -->
   <section id="pagetop" class="contentpg">
     
 	<section id="team" class="section team">
@@ -52,7 +50,7 @@
           </header>
           <div class="about-nav">
             <a href="#services" class="about-node first active" data-slide="0">Past</a>
-            <a href="#team-members" class="about-node last" data-slide="1">Future</a>          
+            <a href="#team-members" class="about-node last" data-slide="1">Now & Future</a>          
           </div>
         </div>
         <div id="about-slider">
@@ -64,9 +62,12 @@
                     <div class="details">
                       <div class="identifier">
                         <h3 class="name">Born</h3>
-                        <h4 class="subheading">In 1983, Viiala Akaa</h4>
+                        <h4 class="subheading">February 20th 1983, Viiala Akaa</h4>
                       </div>
-                      <div class="text-content"><p>A proper strategy is one of the building blocks of your company, product, or service. Strategy includes Brand Alignment, Naming, Creative Consulting and Direction. We'll help you create a solid foundation to build your brand on.</p></div>
+                      <div class="text-content"><p>I have a big brother and we lived in a small town (population approximately 5000) of Viiala (now part of Akaa city).
+					  When I was at age of 6 I started to get interested in computers and I got my Commodore 64 as a birthday present. When I learned to read, I started to go through
+					  books about BASIC programming. I even wrote couple of programs with BASIC with a help of Mikrobitti -magazine.
+					  </p></div>
                     </div>
                   </li>
                   <li class="pane">
@@ -80,7 +81,6 @@
                     </div>
                   </li>
                   <li class="pane">
-                    <!--<div class="left-end"><img src="images/service-design.png" alt="Design" class="member-pic"></div>-->
                     <div class="details">
                       <div class="identifier">
                         <h3 class="name">Graduation</h3>
@@ -104,10 +104,11 @@
                   <li class="pane">
                     <div class="details">
                       <div class="identifier">
-                        <h3 class="name">Illustration</h3>
-                        <h4 class="subheading">Digital Presence</h4>
+                        <h3 class="name">Gap year</h3>
+                        <h4 class="subheading">Working in construction site</h4>
                       </div>
-                      <div class="text-content"><p>Our projects start with pencil and paper, but our illustrated storyboards and technical drawings also make an excellent finishing touch. For something truly unique, we offer custom illustrations that help your brand connect and your story inspire.</p></div>
+                      <div class="text-content"><p>After leaving the army, I started to look for a job and ended up as an construction site worker. I made
+					  steelworks that are inside the concrete elements. That turned out to be a physically hard job for a guy who was a nerd at heart.</p></div>
                     </div>
                   </li>
                 </ul>
@@ -121,7 +122,7 @@
                 <li><a href="#" class="service-node"><img src="img/grow.png" alt="Grow up" class="nav-pic" height="80px"></a></li>
                 <li><a href="#" class="service-node"><img src="img/yohat.png" alt="Graduation" class="nav-pic" height="80px"></a></li>
                 <li><a href="#" class="service-node"><img src="img/army_rank.png" alt="Army" class="nav-pic" height="80px"></a></li>
-                <li><a href="#" class="service-node"><img src="img/service-illustration.png" alt="Illustration" class="nav-pic"></a></li>
+                <li><a href="#" class="service-node"><img src="img/helmet.png" alt="Construction" class="nav-pic" height="80px"></a></li>
               </ul>
             </li>
             <li class="inner-slide">
@@ -130,10 +131,10 @@
                   <li class="pane">
                     <div class="details">
                       <div class="identifier">
-                        <h3 class="name">Roby Fitzhenry</h3>
-                        <h4 class="subheading">Design Director</h4>
+                        <h3 class="name">University</h3>
+                        <h4 class="subheading">Computer sciences in Tampere University</h4>
                       </div>
-                      <div class="text-content"><p>Over the last decade, Roby has focused on branding through strategy, identity, print and website design. His intuitive process allows him to find the core truths in any project. He is a board member of AIGA Houston and helps with TEDxHouston.</p></div>
+                      <div class="text-content"><p>On year 2008 I applied for computer sciences in Tampere University. I got accepted at my first try. Now I am writing my master's thesis (Pro gradu) and my graduation deadline is this year.</p></div>
                     </div>
                   </li>
                   <li class="pane">
@@ -143,7 +144,7 @@
                         <h4 class="subheading">Software Developer</h4>
                       </div>
                       <div class="text-content"><p>I started as a intern in Logia Software (Itella's subsidiary company at the time). 
-					  My job was to code and design GUI with .NET language and code backend with C#. Mainly with Visual Basic but I did use jQuery and Ajax as well.
+					  My job was to code and design GUI with .NET language and code backend with C#. Mainly with Visual Basic and C# but I did use jQuery and Ajax as well.
 					  After internship was over I was hired as a full time employee. After a year I got a job offer from Digia Finland and I applied to it.
 					  I got hired and now I mainly code (JavaEE) integrations for the public sector.</p></div>
                     </div>
@@ -162,11 +163,14 @@
                   <li class="pane">
                     <div class="details">
                       <div class="identifier">
-                        <h3 class="name">Tyler Swanner</h3>
-                        <h4 class="subheading">Creative Director</h4>
+                        <h3 class="name">Future</h3>
+                        <h4 class="subheading">The next best thing</h4>
                       </div>
                       <div class="text-content">
-                        <p>Tyler is a nice guy. He hails from the state of Mississippi where he learned to play music and eat everything prepared fried. At AC, Tyler brings vision and a keen eye to each project. He serves on the AIGA Houston board of directors.</p>
+                        <p>I am currently working but looking for other opportunities. I have found my passion in coding but in my current job 
+						I cannot use all my skills and brainpower I have. So, if You have an open position for enthusiastingly coding nerd, please feel free
+						to contact me through telephone, e-mail or via LinkedIn. You can find my number and address at the bottom of this page or by pressing brief 
+						on the upper navigation bar. You can view my LinkedIn profile by clicking the icon inside the bubble on upper right corner.</p>
                       </div>
                     </div>
                   </li>
@@ -177,10 +181,10 @@
                 </ul>
               </div>
               <ul class="team-nav">
-                <li><a href="#" class="member-node"><img src="images/new-team-headshots-roby.png" alt="Roby Fitzhenry" class="nav-pic"></a></li>
+                <li><a href="#" class="member-node"><img src="img/uta.png" alt="University" class="nav-pic" height="78px"></a></li>
                 <li><a href="#" class="member-node"><img src="img/coin.png" alt="Started Working" class="nav-pic" height="78px"></a></li>
                 <li><a href="#" class="member-node"><img src="img/life_1up.png" alt="Child" class="nav-pic"></a></li>
-                <li><a href="#" class="member-node"><img src="images/new-team-headshots-tyler.png" alt="Tyler Swanner" class="nav-pic"></a></li>
+                <li><a href="#" class="member-node"><img src="img/future.png" alt="Future" class="nav-pic" height="78px"></a></li>
               </ul>
             </li>
           </ul>
@@ -189,21 +193,22 @@
 	
   </section><!-- @end #pagetop -->
   
-  <!-- BG http://nature.desktopnexus.com/wallpaper/1581411/ -->
-  <section id="about" class="contentpg">
-    <h2>My work</h2>
+  <section id="myskills" class="contentpg">
+    <h2>My skills</h2>
 	<div class="lifeContainer">
 		<div class="bornContainer">
 			<div id="content">
 			<div class="legend">
 				<h3>Legend:</h3>
+				<br />
 				<div class="skills">
 					<ul>
 						<li class="jq">JavaScript</li>
 						<li class="css">CSS3</li>
 						<li class="html">HTML5</li>
 						<li class="php">PHP</li>
-						<li class="sql">MySQL</li>
+						<li class="net">.NET</li>
+						<li class="java">Java</li>
 					</ul>
 				</div>	
 			</div>
@@ -213,40 +218,47 @@
 		<div class="get">
 			<div class="arc">
 				<span class="text">JavaScript</span>
-				<input type="hidden" class="percent" value="75" />
+				<input type="hidden" class="percent" value="40" />
 				<input type="hidden" class="color" value="#97BE0D" />
 			</div>
 			<div class="arc">
 				<span class="text">CSS3</span>
-				<input type="hidden" class="percent" value="90" />
+				<input type="hidden" class="percent" value="50" />
 				<input type="hidden" class="color" value="#D84F5F" />
 			</div>
+			<span></span>
 			<div class="arc">
 				<span class="text">HTML5</span>
-				<input type="hidden" class="percent" value="80" />
+				<input type="hidden" class="percent" value="58" />
 				<input type="hidden" class="color" value="#88B8E6" />
 			</div>
+			<span></span>
 			<div class="arc">
 				<span class="text">PHP</span>
-				<input type="hidden" class="percent" value="53" />
+				<input type="hidden" class="percent" value="75" />
 				<input type="hidden" class="color" value="#BEDBE9" />
 			</div>
+			<span></span>
 			<div class="arc">
-				<span class="text">MySQL</span>
-				<input type="hidden" class="percent" value="45" />
-				<input type="hidden" class="color" value="#88B8E6" />
+				<span class="text">.NET</span>
+				<input type="hidden" class="percent" value="76" />
+				<input type="hidden" class="color" value="#4747FF" />
+			</div>
+			<span></span>
+			<div class="arc">
+				<span class="text">Java</span>
+				<input type="hidden" class="percent" value="90" />
+				<input type="hidden" class="color" value="#E6E600" />
 			</div>
 		</div>
 		</div>
 	</div>
-  </section><!-- @end #about -->
+  </section><!-- @end #myskills -->
   
-  <!-- BG http://architecture.desktopnexus.com/wallpaper/1582636/ -->
-  <section id="portfolio" class="contentpg">
-    <h2>What's next?</h2>
-  </section><!-- @end #portfolio -->
+  <section id="aboutme" class="contentpg">
+    <h2>More about me</h2>
+  </section><!-- @end #aboutme -->
   
-  <!-- BG http://abstract.desktopnexus.com/wallpaper/1583541/ -->
   <section id="contact" class="contentpg">
   
 			<div class="content"><br /><h2>Contact</h2>

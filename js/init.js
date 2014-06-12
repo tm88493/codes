@@ -37,7 +37,21 @@ var o = {
 				color = t.find('.color').val(),
 				value = t.find('.percent').val(),
 				text = t.find('.text').text();
-			
+			if(Number(value) < 20) {
+			text += '\nPoor';
+			}
+			if(Number(value) >= 20 && Number(value) <= 40) {
+			text += '\nFair';
+			}
+			if(Number(value) > 40 && Number(value) <= 60) {
+			text += '\nMediocre';
+			}
+			if(Number(value) > 60 && Number(value) <= 80) {
+			text += '\nGood';
+			}
+			if(Number(value) > 80) {
+			text += '\nExcellent';
+			}
 			rad += 30;	
 			var z = r.path().attr({ arc: [value, color, rad], 'stroke-width': 26 });
 			
@@ -46,7 +60,7 @@ var o = {
                 if(Raphael.type != 'VML') //solves IE problem
 				this.toFront();
 				title.stop().animate({ opacity: 0 }, speed, '>', function(){
-					this.attr({ text: text + '\n' + value + '%' }).animate({ opacity: 1 }, speed, '<');
+					this.attr({ text: text }).animate({ opacity: 1 }, speed, '<');
 				});
             }).mouseout(function(){
 				this.stop().animate({ 'stroke-width': 26, opacity: 1 }, speed*4, 'elastic');
