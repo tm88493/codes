@@ -143,7 +143,7 @@
                         <h3 class="name">Started working</h3>
                         <h4 class="subheading">Software Developer</h4>
                       </div>
-                      <div class="text-content"><p>I started as a intern in Logia Software (Itella's subsidiary company at the time). 
+                      <div class="text-content"><p>I started as an intern in Logia Software (Itella's subsidiary company at the time). 
 					  My job was to code and design GUI with .NET language and code backend with C#. Mainly with Visual Basic and C# but I did use jQuery and Ajax as well.
 					  After internship was over I was hired as a full time employee. After a year I got a job offer from Digia Finland and I applied to it.
 					  I got hired and now I mainly code (JavaEE) integrations for the public sector.</p></div>
@@ -217,15 +217,16 @@
 
 		<div class="get">
 			<div class="arc">
-				<span class="text">JavaScript</span>
-				<input type="hidden" class="percent" value="40" />
-				<input type="hidden" class="color" value="#97BE0D" />
-			</div>
-			<div class="arc">
 				<span class="text">CSS3</span>
-				<input type="hidden" class="percent" value="50" />
+				<input type="hidden" class="percent" value="40" />
 				<input type="hidden" class="color" value="#D84F5F" />
 			</div>
+			<div class="arc">
+				<span class="text">JavaScript</span>
+				<input type="hidden" class="percent" value="55" />
+				<input type="hidden" class="color" value="#97BE0D" />
+			</div>
+
 			<span></span>
 			<div class="arc">
 				<span class="text">HTML5</span>
@@ -256,13 +257,42 @@
   </section><!-- @end #myskills -->
   
   <section id="aboutme" class="contentpg">
-    <h2>More about me</h2>
+    
+	<div class="content">
+	<h2>More about me</h2><p>&nbsp;</p>
+		<ul class="hobbies_code">
+		<li><span class="green">/**</span></li>
+		<li><span class="green">** This is a class for introducing a nerd called Tero Strakh. Feel free to enrich this!</span></li>
+		<li><span class="green">**/</span></li>
+		<li><br /><span class="green">public class TeroStrakh {</span></li>
+			<li>&nbsp;&nbsp;<span class="blue">public void IntroducePerson() {</span><span class="green"> // Introduce yourself!</span</li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">String[] hobbies = new String[5];</span><span class="green"> // Create new String array for hobbies.</span></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">hobbies[0] = "I love reading books to improve or aquire new skills."; </span></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">hobbies[1] = "Coding and learning different coding languages."; </span></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">hobbies[2] = "Walking and cycling."; </span> </li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">hobbies[3] = "Trying to learn russian."; </span></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">hobbies[4] = "We all know that nerds do not have any hobbies beside coding, but I had to come up something..."; </span></li>
+			<li><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">Status status = new Status(true, true);</span><span class="green"> // Create new Object for marital status (Boolean Married, Boolean HasChildren). This Object is introduced elsewhere.</span></li>
+			<li><br /></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">for (int i=0; i&lt;hobbies.length; i++) { System.out.println(hobbies[i]); }</span><span class="green"> // Print hobbies to console.</span></li>
+			<li>&nbsp;</li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">System.out.println("Marital status:");</span></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">if (status.married() { System.out.println("I am married."); }</span></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">if (status.hasChildren() { System.out.println("With one children (9 months)"); }</span></li>
+			<li>&nbsp;&nbsp;<span class="blue">}</span><span class="green"> // End IntroducePerson()</span></li>
+			<li><br /></li>
+			<li>&nbsp;&nbsp;<span class="blue">public void PrintAdditionalInformation() {</span></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">System.out.println("Feel free to ask! My contact information is right below this &lt;div&gt;!");</span></li>
+			<li>&nbsp;&nbsp;<span class="blue">}</span><span class="green"> // End PrintAdditionalInformation()</span></li>
+			<li><span class="green">}</span><span class="green"> // End class TeroStrakh</span></li>
+		</ul>
+	</div>
   </section><!-- @end #aboutme -->
   
   <section id="contact" class="contentpg">
   
-			<div class="content"><br /><h2>Contact</h2>
-				<ul class="code">
+			<div class="content"><h2>Contact</h2><p>&nbsp;</p>
+				<ul class="code" id="border">
 					<li><span class="green">.contact</span>{
 						<ul>
 							<li><span class="blue">phone</span>: <span class="purple">040 - 822 2129</span>;</li>

@@ -200,6 +200,19 @@ h2 {
   padding: 55px 80px;
 }
 
+.hobbies_code {
+	font-family:Consolas, "Liberation Mono", Courier, monospace;
+	font-size:16px;
+	font-weight:bold;
+	color:#7f0a0c
+	display: inline-block;
+	padding: 7px 12px;
+	background: rgba(0,0,0,0.9);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+	
 .code {
 	font-family:Consolas, "Liberation Mono", Courier, monospace;
 	font-size:16px;
@@ -207,7 +220,7 @@ h2 {
 	color:#7f0a0c
 	display: inline-block;
 	padding: 7px 12px;
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.4);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -336,6 +349,10 @@ color:#193340;
 font-size:40px;
 margin-bottom:40px;
 text-align:right;
+}
+
+#border {
+border:solid;
 }
 
 .skills {
